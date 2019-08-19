@@ -1,0 +1,38 @@
+<?php
+
+$operacao;
+$num1;
+$num2;
+$tot;
+
+echo "CALCULADORA";
+echo "\n1-Adição";
+echo "\n2-Subtração";
+echo "\n3-Divisão";
+echo "\n4-Multiplicação";
+
+echo "Escolha a operação desejada: ";
+$operacao = readline ();
+echo "\nDigite o primeiro número: ";
+$num1 = readline ();
+echo "\nDigite o segundo número: ";
+$num2 = readline ();
+
+switch ($operacao) {
+    case '1':
+        $tot = $num1 + $num2;
+        break;
+    case '2':
+        $tot = $num1 - $num2;
+        break;
+    case '3':
+        $tot = $num1 / $num2;
+        break;
+    case '4':
+        $tot = $num1 * $num2;
+    default:
+        echo "\nComando Inválido";
+        break;
+}
+    echo "\nO resultado da operação é: " . number_format($tot, 2);
+?>
